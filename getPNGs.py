@@ -5,7 +5,6 @@ import cv2 as cv
 import os
 import numpy as np
 
-
 pyautogui.PAUSE = 2.5
 
 # OPEN PDF IN FULL SCREEN
@@ -30,7 +29,7 @@ def getPNG(filename):
     screenshot = pyautogui.screenshot()
     screenshot = cv.cvtColor(np.array(screenshot), cv.COLOR_RGB2BGR)
 
-    PNGpath = 'C:/Users/mcevoye3799/Documents/Programming/Computer Vision/PNGS/'
+    PNGpath = # add path here
     fullPath = PNGpath + (filename.replace('.pdf','.png'))
     print('full path ', fullPath)
     cv.imwrite(fullPath, screenshot) 
@@ -43,7 +42,7 @@ def getPNG(filename):
    
 def main():
 
-    directory_path= 'C:/Users/mcevoye3799/Documents/Programming/Computer Vision/PDF_drawings'
+    directory_path= #path + '/PDF_drawings'
     index = 0
     total = len(directory_path)
 
@@ -59,6 +58,4 @@ def main():
         print ('PDF ', index, '/', total)
         index = index + 1 
     
-
-
 main()
